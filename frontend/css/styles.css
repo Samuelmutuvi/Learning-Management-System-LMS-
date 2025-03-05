@@ -1,0 +1,107 @@
+/* Background and overall styling */
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #5a7d3f, #1e420f);
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Sidebar */
+aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100vh;
+    background: transparent;
+    padding-top: 20px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(220, 216, 216);
+}
+
+/* Vertical Line */
+.vertical-line {
+    width: 5px;
+    height: 250px;
+    background-color: rgb(239, 233, 233);
+    position: absolute;
+    left: 150px;
+    top: 60px;
+}
+
+/* Sidebar Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 20px;
+    text-align: left;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav ul li:first-child {
+    margin-top: 20px;
+}
+
+/* Main Content */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid cyan;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: aqua;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    
+}
