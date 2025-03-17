@@ -105,3 +105,44 @@ footer {
     padding: 10px;
     
 }
+.container {
+    margin-top: 200px;
+    margin-left: 450px;
+    margin-right: 450px;
+    height: 60vh;
+    display: grid;
+    align-items: center;
+    place-items: center;
+    background-color: gray;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 20px 35 px 35px rgba(red, green, blue, alpha);
+    text-align: center;
+}
+
+.inputbox{
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: -50px;
+
+}
+input{
+    padding: 10px;
+    border-radius: 15px;
+}
+
+input:hover{
+    background-color: rgb(29, 162, 162);
+}
+
+button{
+    padding: 15px 30px;
+    text-decoration: black;
+    border-radius: 15px;
+    background-color: radial-gradient(circle, #5a7d3f, #1e420f);
+
+}
+inputbox.forgot {
+   margin: -30px;
+}
