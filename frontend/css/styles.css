@@ -84,7 +84,7 @@ nav ul li:first-child {
 }
 
 button {
-    background-color: white;
+    background-color: rgb(107, 90, 205);
     border: 2px solid cyan;
     padding: 15px;
     font-size: 14px;
@@ -109,7 +109,7 @@ footer {
     margin-top: 200px;
     margin-left: 450px;
     margin-right: 450px;
-    height: 60vh;
+    height: 75vh;
     display: grid;
     align-items: center;
     place-items: center;
@@ -145,4 +145,21 @@ button{
 }
 inputbox.forgot {
    margin: -30px;
+}
+
+.icon {
+    padding: 695px;
+    left: 10px;
+    top: 46%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 20px;
+    position: absolute;
+}
+
+button.register{
+    background-color: blue;
+}
+h5{
+    padding: auto;
 }
