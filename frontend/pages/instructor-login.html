@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Portal</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Instructor Portal</h1>
+        
+        <!-- Login Section -->
+        <div id="login-section">
+            <div class="form-group">
+                <label for="instructor-id">Instructor ID/Email</label>
+                <input type="text" id="instructor-id" placeholder="Enter ID or email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
+            
+            <button id="login-btn">Login</button>
+            
+            <p>Forgot password? <a href="#" id="forgot-password">Reset</a></p>
+            <p>Don't have an account? <a href="instructor-create.html">Register</a></p>
+        </div>
+
+        <!-- Dashboard Section (hidden until login) -->
+        <div id="dashboard-section" style="display:none;">
+            <div class="dashboard-option">
+                <h2>Add Course Notes</h2>
+                <textarea id="course-notes" placeholder="Enter your notes here..." rows="5"></textarea>
+                <button id="save-notes">Save Notes</button>
+            </div>
+
+            <div class="dashboard-option">
+                <h2>Create Assignment</h2>
+                <input type="text" id="assignment-title" placeholder="Assignment Title">
+                <textarea id="assignment-desc" placeholder="Assignment Description" rows="3"></textarea>
+                <input type="date" id="assignment-due">
+                <button id="create-assignment">Create Assignment</button>
+            </div>
+
+            <div class="dashboard-option">
+                <h2>Create Quiz</h2>
+                <div id="quiz-container">
+                    <input type="text" id="quiz-title" placeholder="Quiz Title">
+                    <div id="questions-container"></div>
+                    <button id="add-question">Add Question</button>
+                    <button id="save-quiz">Save Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/instructor-portal.js"></script>
+</body>
+</html>

@@ -1,11 +1,28 @@
-/* Background and overall styling */
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle, #5a7d3f, #1e420f);
+    background: radial-gradient(circle, forestgreen, darkgreen);
     color: black;
-    text-align: center;
+    line-height: 1.6;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+/* Layout Containers */
+.container,
+.reset-container,
+.confirmation-container,
+.otp-container,
+.excel-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: gray;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Header */
@@ -13,45 +30,67 @@ header {
     padding: 15px;
     font-size: 20px;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
-/* Sidebar */
+/* Sidebar Navigation */
 aside {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 150px;
     height: 100vh;
     background: transparent;
     padding-top: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
 }
 
-/* Hamburger Menu */
+aside.active {
+    transform: translateX(0);
+}
+
 .hamburger {
+    position: fixed;
+    left: 20px;
+    top: 40px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    margin-left: 15px;
+    z-index: 101;
 }
 
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: rgb(220, 216, 216);
+    background-color: gainsboro;
+    transition: all 0.3s ease;
 }
 
-/* Vertical Line */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .vertical-line {
     width: 5px;
     height: 250px;
-    background-color: rgb(239, 233, 233);
+    background-color: whitesmoke;
     position: absolute;
     left: 150px;
     top: 60px;
 }
 
-/* Sidebar Navigation */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -68,98 +107,206 @@ nav ul li a {
     color: black;
     font-weight: bold;
     font-size: 14px;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-nav ul li:first-child {
-    margin-top: 20px;
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Main Content */
-.button-container {
+.quantitative-container,
+.qualitative-container {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
-    margin-top: 50px;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 1200px;
 }
 
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    height: 30vh;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+/* Buttons */
 button {
-    background-color: rgb(107, 90, 205);
+    background-color: slateblue;
+    color: black;
     border: 2px solid cyan;
-    padding: 15px;
+    padding: 15px 30px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: inline-block;
 }
-button:hover{
+
+button:hover {
     background-color: aqua;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+.inputbox,
+.input-group {
+    margin-bottom: 20px;
+    margin-right: 50px;
+    width: 60%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input:hover,
+input:focus {
+    background-color: turquoise;
+    outline: none;
+}
+
+/* OTP Inputs */
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.otp-input {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+}
+
+/* Week Content (Excel Course) */
+.week {
+    background: lightcyan;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border-left: 4px solid dodgerblue;
+}
+
+.week-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    background: lightblue;
+    transition: background 0.3s;
+}
+
+.week-header:hover {
+    background: skyblue;
+}
+
+.week-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.week-content.active {
+    padding: 20px;
+    max-height: 1000px;
 }
 
 /* Footer */
 footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
     margin-top: 50px;
     font-size: 16px;
     font-weight: bold;
-    color: white;
-    padding: 10px;
-    
-}
-.container {
-    margin-top: 200px;
-    margin-left: 450px;
-    margin-right: 450px;
-    height: 75vh;
-    display: grid;
-    align-items: center;
-    place-items: center;
-    background-color: gray;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 20px 35 px 35px rgba(red, green, blue, alpha);
-    text-align: center;
 }
 
-.inputbox{
-    text-align: center;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: -50px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container,
+    .reset-container,
+    .confirmation-container,
+    .otp-container,
+    .excel-container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
 
-}
-input{
-    padding: 10px;
-    border-radius: 15px;
-}
+    .course-container,
+    .quantitative-container,
+    .qualitative-container {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
 
-input:hover{
-    background-color: rgb(29, 162, 162);
-}
+    aside {
+        width: 120px;
+    }
 
-button{
-    padding: 15px 30px;
-    text-decoration: black;
-    border-radius: 15px;
-    background-color: radial-gradient(circle, #5a7d3f, #1e420f);
-
-}
-inputbox.forgot {
-   margin: -30px;
-}
-
-.icon {
-    padding: 695px;
-    left: 10px;
-    top: 46%;
-    transform: translateY(-50%);
-    width: 25px;
-    height: 20px;
-    position: absolute;
+    .vertical-line {
+        left: 120px;
+    }
 }
 
-button.register{
-    background-color: blue;
-}
-h5{
-    padding: auto;
+@media (max-width: 480px) {
+    .hamburger {
+        left: 10px;
+        top: 20px;
+    }
+
+    .otp-input {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+    .inputbox {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
 }

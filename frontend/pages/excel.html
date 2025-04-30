@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Data Analysis </title>
+    <link rel='stylesheet' href='../css/styles.css'>
+</head>
+<body>
+    <header> <h1> Welcome learner's name </h1></learner>
+    
+        <aside>
+            <div class="menu">
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="vertical-line"></div>
+            <div>
+            <nav>
+                <ul>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Course enrolled</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">Quiz</a></li>
+                    <li><a href="#">Progress</a></li>
+                    <li><a href="#">Certificate</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </aside>
+
+    <main>
+        <div class="excel-container">
+            <h1><u>Advanced Excel Course</u></h1>
+            
+            <div id="learner-view">
+                <div class="week">
+                    <div class="week-header" onclick="toggleWeek('week1')">
+                        <span>Week 1: Introduction</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div id="week1" class="week-content"></div>
+                </div>
+                
+                <div class="week">
+                    <div class="week-header" onclick="toggleWeek('week2')">
+                        <span>Week 2: Functions and Formula</span>
+                        <!--<div class="week-dropdown">
+                             <button class="dropdown-btn">▼</button>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="event.stopPropagation(); downloadWeek('week2')">Download Materials</a>
+                                <a href="#" onclick="event.stopPropagation(); bookmarkWeek('week2')">Bookmark</a> 
+                            </div>
+                        </div>-->
+                    </div>
+                    <div id="week2" class="week-content"></div>
+                </div>
+                
+                <div class="week">
+                    <div class="week-header" onclick="toggleWeek('week3')">
+                        <span>Week 3: Visualization-Dashboard</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div id="week3" class="week-content"></div>
+                </div>
+                
+                <div class="week">
+                    <div class="week-header" onclick="toggleWeek('week4')">
+                        <span>Week 4: Visualization-Interactive Dashboard</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div id="week4" class="week-content"></div>
+                </div>
+                
+                <div class="week">
+                    <div class="week-header" onclick="toggleWeek('week5')">
+                        <span>Week 5: Project</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div id="week5" class="week-content"></div>
+                </div>
+            </div>
+            
+        </main>
+    <footer>
+        <p><marquee>Contact our IT support +254 123 456 789</marquee></p>
+    </footer>
+        </aside>
+</body>
+</html>

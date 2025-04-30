@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmation</title>
+    <link rel='stylesheet' href='../css/styles.css'>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h2>Confirm your Email Address</h2>
+        
+        <form id="email-confirm-form">
+            <div class="input-group">
+                <label for="confirm-email">Re-enter the email</label>
+                <input type="email" id="confirm-email" placeholder="Re-enter your email" required>
+            </div>
+            
+            <button type="button" id="send-code-btn">SEND CODE</button>
+        </form>
+        
+        <div id="code-section" class="code-section" style="display:none;">
+            <div class="otp-container">
+                <h2>Enter the 6-digit code sent to your Email</h2>
+                
+                <div class="otp-inputs">
+                    <input type="text" class="otp-input" maxlength="1" data-index="0" autofocus>
+                    <input type="text" class="otp-input" maxlength="1" data-index="1">
+                    <input type="text" class="otp-input" maxlength="1" data-index="2">
+                    <input type="text" class="otp-input" maxlength="1" data-index="3">
+                    <input type="text" class="otp-input" maxlength="1" data-index="4">
+                    <input type="text" class="otp-input" maxlength="1" data-index="5">
+                </div>
+        
+                <button type="button" id="verify-code-btn">VERIFY CODE</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="welcome-message">Welcome, Instructor</h1>
+        <button id="logout-btn">Logout</button>
+    </header>
+    
+    <div class="dashboard">
+        <div class="sidebar">
+            <h3>Courses</h3>
+            <ul id="course-list">
+                <!-- Dynamically populated -->
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Students</h3>
+                    <p id="student-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Courses</h3>
+                    <p id="course-count">0</p>
+                </div>
+            </div>
+            
+            <div class="recent-activity">
+                <h2>Recent Activity</h2>
+                <ul id="activity-list">
+                    <!-- Dynamically populated -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/instructor-dashboard.js"></script>
+</body>
+</html>
