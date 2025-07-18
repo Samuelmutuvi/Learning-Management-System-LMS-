@@ -11,21 +11,22 @@
     <div class='container'>
         <h1>WELCOME  </h1>
         <label for='details'>Enter the details to login </label>
+        <form  id="login-form" action="homepage.html" method="GET" onsubmit="return validateForm()">
             <div class='inputbox'>
                 <label for='username'> Username</label>
-                <input type='text' placeholder='username' required />
+                <input type='text' id="username" placeholder='username' required />
             </div>
             <div class='inputbox'>
                 <label for='password' > Password</label>
-                <input type='password' placeholder='password' required />
+                <input type='password' id="password" placeholder='password' required />
             </div>
-            <button type='login'  id='login'> <a href='homepage.html'><strong>LOGIN</strong> </a> </button>
+            <button type='login'  id='login'><strong>LOGIN</strong> </button>
             <div class='inputbox'>
                 <p class = 'forgot'>Forgot password <a href='forgot_password.html'>Click Here</a></p>
             </div>
                 <span> Don't have an account <a href='createAccount.html'>Sign Up</a></span>
              </div >
-   
+        </form>
 <script src="../js/auth.js"></script>
 </body>
 </html>

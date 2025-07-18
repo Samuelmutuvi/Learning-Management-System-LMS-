@@ -1,0 +1,15 @@
+{
+  "name": "learning-management-system-lms-",
+  "version": "1.0.0",
+  "description": "This is project for creating a data school Learning Management System where learners can get learning materials including videos and also the instructors can upload the materials,etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

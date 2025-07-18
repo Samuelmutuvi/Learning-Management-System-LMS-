@@ -1,3 +1,4 @@
+// loading the required packages
 require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2/promise');
@@ -123,7 +124,7 @@ function authenticateToken(req, res, next) {
     req.user = user;
     next();
   });
-}
+};           
 
 // API Endpoints
 app.post('/api/register', async (req, res) => {
@@ -134,8 +135,8 @@ app.post('/api/register', async (req, res) => {
       return res.status(400).json({ error: 'Passwords do not match' });
     }
     
-    const username = `${firstname.toLowerCase()}${Math.floor(1000 + Math.random() * 9000)}`;
-    const passwordHash = await bcrypt.hash(password, 10);
+    const username = `${firstname}${Math.floor(1000 + Math.random() * 9000)}`;
+    const passwordHash = await bcrypt.hash(password, 25);
     
     const [result] = await pool.query(
       `INSERT INTO users (username, first_name, last_name, email, phone, password_hash) 

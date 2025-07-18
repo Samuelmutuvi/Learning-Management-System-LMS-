@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
     const learnerNamePlaceholders = document.querySelectorAll("h1, header h1");
+
+    const user = JSON.parse(localStorage.getItem('user'));
+    
+    if (user && user.firstname) {
+        document.getElementById('learner-name').textContent = user.firstname;
+    } 
     
     // user data handling
     function loadUserData() {

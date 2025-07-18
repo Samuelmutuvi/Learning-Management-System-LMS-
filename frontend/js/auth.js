@@ -150,6 +150,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+//
+
+// After successful login
+localStorage.setItem('user', JSON.stringify({
+    firstname: data.user.firstname,
+    // add other info like email, token, etc.
+}));
+
+
     async function handlePasswordReset(e) {
         e.preventDefault();
         const email = e.target.elements.email.value;
@@ -301,4 +310,5 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(error.message);
         }
     });
+    
 });

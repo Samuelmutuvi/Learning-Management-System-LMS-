@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome learner's name to our LMS</h1>
+        <h1>Welcome <span id="learner-name"></span> to our LMS</h1>
     </header>
 
     <aside>
@@ -19,7 +19,6 @@
                 <div></div>
             </div>
             <div class="vertical-line"></div>
-            <div>
             <nav>
                 <ul>
                     <li><a href="courses.html">Courses</a></li>
@@ -31,21 +30,22 @@
                 </ul>
             </nav>
         </div>
-        </div>
     </aside>
-     
+
     <main>
         <div class="course-container">
-            <button><a href='data.html'>DATA ANALYSIS</a></button>
-            <button>WEB DEVELOPMENT</button>
-            <button>APP DEVELOPMENT</button>
-            <button>GRAPHICS DESIGN</button>
-            <button>BUSINESS INTELLIGENCE</button>
+            <button id="data-analysis">DATA ANALYSIS</button>
+            <button id="web-dev">WEB DEVELOPMENT</button>
+            <button id="app-dev">APP DEVELOPMENT</button>
+            <button id="graphics">GRAPHICS DESIGN</button>
+            <button id="bi">BUSINESS INTELLIGENCE</button>
         </div>
+    </main>
 
     <footer>
         <p><marquee>Contact our IT support +254 123 456 789</marquee></p>
     </footer>
-<script src="../js/courses.js"></script>
+
+    <script src="../js/courses.js"></script>
 </body>
 </html>
